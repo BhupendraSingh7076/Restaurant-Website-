@@ -36,8 +36,8 @@ A **dynamic restaurant website** built with **HTML, CSS, JavaScript**, and **Pyt
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/restaurant-website.git
-cd restaurant-website
+[git clone https://github.com/your-username/restaurant-website.git
+cd restaurant-website](https://github.com/BhupendraSingh7076/Restaurant-Website-/tree/main)
 ```
 
 ### 2. Run the project
