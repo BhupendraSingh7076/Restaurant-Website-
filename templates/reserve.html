@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <title>Reserve Table</title>
+</head>
+<body>
+  <section class="reservation" id="contact">
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="/dashboard" class="btn">Return to Dashboard</a>
+    </div>
+    
+    <div class="section__container reservation__container">
+      <h3>RESERVATION</h3>
+      <h2 class="section__header">BOOK YOUR TABLE</h2>
+      <form action="/reserve" method="POST">
+        <input type="text" name="name" placeholder="NAME" required />
+        <input type="email" name="email" placeholder="EMAIL" required />
+        <input type="date" name="date" placeholder="date" required />
+        <input type="time" name="time" required />
+        <input type="number" name="people" placeholder="PEOPLE" required />
+        <button class="btn" type="submit">FIND TABLE</button>
+      </form>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="/dashboard" class="btn">View All Reservations</a>
+    </div>
+    
+    <img src="{{ url_for('static', filename='reservation-bg-1.png') }}" alt="reservation" class="reservation__bg-1" />
+    <img src="{{ url_for('static', filename='reservation-bg-2.png') }}" alt="reservation" class="reservation__bg-2" />
+  </section>
+</body>
+</html>

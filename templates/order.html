@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Now</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='order-bg.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .order-form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .order-form-container h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .order-form-container form {
+      display: grid;
+      gap: 1rem;
+    }
+    .order-form-container input,
+    .order-form-container button {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+    .order-form-container button {
+      background-color: #ffc135;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .order-form-container button:hover {
+      background-color: #f1971c;
+    }
+  </style>
+</head>
+<body>
+  <div class="order-form-container">
+    <h2>Order: {{ item }}</h2>
+    <form method="POST">
+      <input type="hidden" name="item" value="{{ item }}">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required />
+      <input type="text" name="address" placeholder="Delivery Address" required />
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</body>
+</body>
+</html>

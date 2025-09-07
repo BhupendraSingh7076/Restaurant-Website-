@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+
+    <title>Restaurant Website</title>
+  </head>
+
+  <body>
+    <header class="header">     
+      <nav class="nav">
+        <div class="nav__header">
+          <div class="nav__logo">
+              <img src="{{url_for('static', filename='rest_logo.png')}}" alt="logo" class="nav__logo"/>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#special">SPECIAL</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#event">EVENTS</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <div class="header__image">
+          <img src="{{url_for('static', filename='home_img.jpeg')}}" alt="header" />
+        </div>
+        <div class="header__content">
+          <h2>"For the love of burgers and pizza—your perfect combo is right here!"</h2>
+          <h1>Flavor Fusion Week</h1>
+        </div>
+      </div>
+    </header>
+   
+
+    <section class="section__container banner__container" id="special">
+      <div class="banner_card">
+        <h1>Special Week - </h1>
+        <p>"A week of cheesy delights! 
+          <br>Grab your favorite pizza at 30% off."
+        </p>
+      </div>
+      <div class="banner_card">
+        <p>"Buy one burger and get a free order 
+          of fries to complete your meal."
+        </p>
+      </div>
+      <div class="banner__card">
+        <p>TRY IT OUT TODAY</p>
+        <h4>FRESH & CHILI</h4>
+      </div>
+    </section>
+    
+
+    <section class="section__container order__container" id="menu">
+      <h3>Hot Crispy Loaded</h3>
+      <h2 class="section__header">CHOOSE & ENJOY</h2>
+      <p class="section__description">
+        "Craving the perfect bite? We've got you covered with juicy, handcrafted burgers and oven-fresh 
+        pizzas that pack bold flavors in every slice. Whether you're in the mood for a cheesy delight or a 
+        loaded burger, we serve happiness on every plate. Come for the food, stay for the experience!"
+      </p>
+      <div class="order__grid">
+        <div class="order__card">
+          <img src="{{url_for('static', filename='order-1.png')}}" alt="order" />
+          <h4>Chicken Burger</h4>
+          <p>
+            "Sink your teeth into the timeless perfection of our Chicken Burger,
+            an experience that never goes out of style."
+          </p>
+          <p> 230 Rupees </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="Chicken Burger">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+        <div class="order__card">
+          <img src="{{url_for('static', filename='order-2.png')}}" alt="order" />
+          <h4>Veggie Delight Burger</h4>
+          <p>
+            "Embrace the vibrant flavors of our Veggie Delight Burger, a
+            celebration of freshness and wholesome goodness."
+          </p>
+          <p> 190 Rupees  </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="Veggie Delight Burger">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+        <div class="order__card">
+          <img src="{{url_for('static', filename='order-3.png')}}" alt="order" />
+          <h4>BBQ Bacon Burger</h4>
+          <p>
+            "Indulge in a symphony of smoky, savory flavors with our BBQ Bacon
+            Burger, grilled and topped with crispy bacon."
+          </p>
+          <p> 160 Rupees  </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="BBQ Bacon Burger">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+      </div>
+      <div class="order__grid">
+        <div class="order__card">
+          <img src="{{ url_for('static', filename='veg_piz.avif') }}" alt="order" />
+          <h4>Vegetarian Pizza</h4>
+          <p>
+            "Delight in our Vegetarian Pizza : A perfect blend of fresh veggies, 
+            gooey cheese, and a crispy crust, made to satisfy your cravings with every bite. 
+            100% vegetarian, 100% delicious!"
+          </p>
+          <p> 140 Rupees  </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="Vegetarian Pizza">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+        <div class="order__card">
+          <img src="{{url_for('static', filename='rom_piz.png')}}" alt="order" />
+          <h4>Romana Pizza</h4>
+          <p>
+            "Experience the taste of Italy with our Romana Pizza : 
+            A classic thin crust topped with rich tomato sauce, fresh mozzarella, 
+            and authentic flavors for a truly delightful bite!"
+          </p>
+          <p> 180 Rupees  </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="Romana Pizza">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+        <div class="order__card">
+          <img src="{{url_for('static', filename='pepperoni-1.png')}}" alt="order" />
+          <h4>Pepperoni Pizza </h4>
+          <p>
+            "Savor the bold flavors of our Pepperoni Pizza: 
+            Crispy crust, zesty tomato sauce, melted cheese, 
+            and perfectly spiced pepperoni in every bite!"
+          </p>
+          <p> 135 Rupees  </p>
+          <form action="/order" method="GET">
+            <input type="hidden" name="item" value="Pepperoni Pizza">
+            <button type="submit" class="btn">ORDER NOW</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container event__container" id="event">
+
+      <div class="event__content">
+        <div class="event__image">
+          <img src="{{url_for('static', filename='event.png')}}" alt="event" />
+        </div>
+        <div class="event__details">
+          <h3>Discover</h3>
+          <h2 class="section__header">SPECIAL ONE</h2>
+          <p class="section__description">
+            Indulge in our Special Burger, crafted with passion by 
+            our chef just for you! A perfect blend of premium ingredients, 
+            mouthwatering flavors, and a touch of culinary magic. This isn’t 
+            just a burger—it’s an experience you simply have to taste!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation" id="contact">
+      <div class ="book__card" onclick="window.location.href='/reserve'">
+        <h2> BOOK YOUR TABLE</h2>
+        <p>Click here to reserve your table!</p>
+      </div>      
+      
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__logo">
+          <img src="{{url_for('static', filename='rest_logo.png')}}" alt="logo" />
+        </div>
+        <div class="footer__content">
+          <p>
+            Welcome to Restaurant, where passion for exceptional food and
+            genuine hospitality come together. Our story is one of dedication to
+            crafting the perfect burger experience, from sourcing the finest
+            ingredients to delivering unparalleled taste in every bite.
+          </p>
+          <div>
+            <ul class="footer__links">
+              <li>
+                <span><i class="ri-map-pin-2-fill"></i></span>
+                123 Foodie Lane, Culinary City, <br>FL 98 India<br/>
+              </li>
+              <li>
+                <span><i class="ri-mail-fill"></i></span>
+                pizzahouse@gmail.com
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024, All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
