@@ -1,0 +1,37 @@
+body {
+      background-image: url("{{ url_for('static', filename='reservation__container') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .reservation__container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .reservation__container h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .reservation__container {
+      display: grid;
+      gap: 1rem;
+    }
+    .reservation__container input,
+    .reservation__container button {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+    .reservation__container button {
+      background-color: #ffc135;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .reservation__container button:hover {
+      background-color: #f1971c;
+    }
